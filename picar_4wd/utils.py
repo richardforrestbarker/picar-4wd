@@ -91,7 +91,7 @@ def getIP(ifaces=['wlan0', 'eth0']):
             return ipv4
     return False
 
-root = "/home/local"
+root = "/home/local/car"
 def main():
     import sys
     if len(sys.argv) >= 2:

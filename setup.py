@@ -151,7 +151,7 @@ class Config(object):
         except Exception as e:
             return -1, e
 
-def install(root="/home/local/car"):
+def install(root="/home/local/car", user="local"):
     print("Install dependency")
     do(msg="update apt-get",
         cmd='run_command("sudo apt-get update")')
@@ -185,8 +185,6 @@ def install(root="/home/local/car"):
     do(msg="add excutable mode for picar-4wd-web-example",
         cmd='run_command("sudo chmod +x /etc/init.d/picar-4wd-web-example")')
 
-rootCodeDir = sys.argv[1] if len(sys.argv) > 1 else here
-user = sys.argv[2] if len(sys.argv) > 2 else "pi"
 install()
 
 setup(
