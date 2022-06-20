@@ -3,7 +3,8 @@ class FileDB(object):
 
     A file based database, read and write arguements in the specific file.
     """
-	DIR = "/home/pi/.picar-4wd/"
+	root = "/home/local"
+	DIR = f"{root}/.picar-4wd/"
 	def __init__(self, db=None):
 		'''Init the db_file is a file to save the datas.'''
 

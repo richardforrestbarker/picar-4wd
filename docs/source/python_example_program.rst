@@ -9,7 +9,7 @@ Python Example Program is in the examples folder.
 
 .. code-block:: 
 
-    cd /home/pi/picar-4wd/examples
+    cd /home/local/picar-4wd/examples
 
 You can run them by using Python3.
 

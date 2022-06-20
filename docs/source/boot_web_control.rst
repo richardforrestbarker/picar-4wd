@@ -9,7 +9,7 @@ Input the command and start up the web control program.
 
 .. code-block:: 
 
-    cd /home/pi/picar-4wd/
+    cd /home/local/picar-4wd/
     picar-4wd web-example
 
 As the program is running, on the browser, type the IP of the Raspberry Pi, and you can enter the Web interface. 

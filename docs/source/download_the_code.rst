@@ -3,7 +3,7 @@ Download the Code
 
 The codes in the disk don’t need downloading, only for your fast study. If you need the latest codes, please go to github to download as following methods.
 
-① Change directory to /home/pi.
+① Change directory to /home/local.
 
 .. raw:: html
 
@@ -11,10 +11,10 @@ The codes in the disk don’t need downloading, only for your fast study. If you
 
 .. code-block::
 
-    cd /home/pi/
+    cd /home/local/
 
 .. note::
-    cd, short for change directory is to change from the current path to the intended directory. Informally, here is to go to the path /home/pi/.
+    cd, short for change directory is to change from the current path to the intended directory. Informally, here is to go to the path /home/local/.
 
 ② Clone the repository from github.
 

@@ -48,7 +48,7 @@ Click a wheel then set the POWER, click the two buttons in bottom right corner. 
 
 .. code-block:: 
 
-    cd /home/pi/picar-4wd/
+    cd /home/local/picar-4wd/
     picar-4wd web-example
 
 4) In the browser, click Retry, and you can test the direction of the wheel ready to be used.

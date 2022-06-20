@@ -151,7 +151,7 @@ class Config(object):
         except Exception as e:
             return -1, e
 
-def install():
+def install(root):
     print("Install dependency")
     do(msg="update apt-get",
         cmd='run_command("sudo apt-get update")')
@@ -171,13 +171,13 @@ def install():
     do(msg="Add I2C module",
         cmd='Modules().set("i2c-dev")') 
 
-    if ".picar-4wd" not in listdir("/home/pi"):
+    if ".picar-4wd" not in listdir(root):
         do(msg="create .picar-4wd directory",
-            cmd='run_command("sudo mkdir /home/pi/.picar-4wd/")') 
+            cmd=f'run_command("sudo mkdir {root}/.picar-4wd/")') 
     do(msg="copy picar-4wd-config",
-        cmd='run_command("sudo cp ./data/config /home/pi/.picar-4wd/config")')
+        cmd=f'run_command("sudo cp ./data/config {root}/.picar-4wd/config")')
     do(msg="change directory owner",
-        cmd='run_command("sudo chown -R pi:pi /home/pi/.picar-4wd/")')
+        cmd=f'run_command("sudo chown -R {user}:{user} {root}/.picar-4wd/")')
 
     print("Setup picar-4wd web-example service") 
     do(msg="copy picar-4wd web-example file",
@@ -185,7 +185,9 @@ def install():
     do(msg="add excutable mode for picar-4wd-web-example",
         cmd='run_command("sudo chmod +x /etc/init.d/picar-4wd-web-example")')
 
-install()
+rootCodeDir = sys.argv[1] if len(sys.argv) > 1 else here
+user = sys.argv[2] if len(sys.argv) > 2 else "pi"
+install(rootCodeDir)
 
 setup(
     name='picar-4wd',

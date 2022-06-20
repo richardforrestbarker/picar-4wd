@@ -31,7 +31,7 @@ Initialize the environment before using the product example. The methods are as 
 
 .. code-block:: 
 
-  cd /home/pi/picar-4wd/
+  cd /home/local/picar-4wd/
 
 ③ Start up the initialization function.
 
